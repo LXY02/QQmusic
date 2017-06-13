@@ -11,8 +11,20 @@
         </nav>
         <section class="vote__bd js_vote_wrap">
             <div class="vote__bd_box js_vote_wrapbox cur" data-index="0" data-voteset="94" style="transform: translateX(0%);">
-                <ul class="vote_list js_vote_list" data-voteset="94">
-                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr">
+                <!--<ul class="vote_list js_vote_list" data-voteset="94">-->
+                    <!--<li class="js_vote_item vote_list__item vote_list__count&#45;&#45;top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr">-->
+                        <!--<a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>-->
+                        <!--<span class="vote_list__txt c_txt1">{{item.title}}</span>-->
+                        <!--<a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">-->
+                            <!--<svg class="icon_svg c_txt1 icon_play_r">-->
+                                <!--<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>-->
+                            <!--</svg>-->
+                        <!--</a>-->
+                        <!--<span class="vote_list__count vote_list__count&#45;&#45;top c_txt3">{{item.randomNum}}票</span>-->
+                    <!--</li>-->
+                <!--</ul>-->
+                <transition-group tag="ul" name="flip-list" class="vote_list js_vote_list" data-voteset="94">
+                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr" :key="item.randomNum">
                         <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>
                         <span class="vote_list__txt c_txt1">{{item.title}}</span>
                         <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">
@@ -22,7 +34,7 @@
                         </a>
                         <span class="vote_list__count vote_list__count--top c_txt3">{{item.randomNum}}票</span>
                     </li>
-                </ul>
+                </transition-group>
                 <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
             </div>
         </section>
@@ -34,29 +46,29 @@
     export default {
         data () {
             return {
-                dataArr: [],
-                currArr: []
+                dataArr: [],  //用来存放ajax请求到的数据里的vote数据
+                currArr: []  //用来存放当前点击页面歌曲排行的信息
             }
         },
         created() {
             var _this = this;
             axios.get('https://www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/vote_list')
                 .then(function (response) {
+                    console.log(response);
                     var dataVote = response.data.vote;
                     for(var i in dataVote){
                         dataVote[i].cur = false;  //用来判断是否是当前页面
                         for(var j in dataVote[i]['Fvote_set']) {
                             dataVote[i]['Fvote_set'][j].randomNum = parseInt(Math.random()*50000);//随机一个投票数量
                         }
+                        dataVote[i]['Fvote_set'].sort(function (a,b) {   //做升序排列
+                            return b.randomNum - a.randomNum;
+                        });
                         _this.dataArr.push(dataVote[i]);
                     }
                     _this.dataArr.reverse();
                     _this.dataArr[0].cur = true; //初始第一项为选中项
                     _this.currArr = _this.dataArr[0]['Fvote_set'].slice(0);
-                    _this.currArr.sort(function (a,b) {
-                       return b.randomNum - a.randomNum;
-                    });
-                    console.log(_this.dataArr);
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -70,9 +82,6 @@
                 }
                 item.cur = true;
                 _this.currArr = item['Fvote_set'].slice(0);
-                _this.currArr.sort(function (a,b) {
-                    return b.randomNum - a.randomNum;
-                });
             }
         }
     }
@@ -268,4 +277,19 @@
         background-color: transparent;
     }
 
+    /*过渡效果*/
+    .flip-list-enter-active {
+        transition: all .8s .4s ease-out;
+    }
+    .flip-list-leave-active {
+        transition: all .5s ease-in;
+    }
+    .flip-list-enter {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    .flip-list-leave-active {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
 </style>
