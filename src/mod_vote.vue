@@ -23,9 +23,7 @@
                         <span class="vote_list__count vote_list__count--top c_txt3">{{item.randomNum}}票</span>
                     </li>
                 </transition-group>
-                <transition name="activityStatement">
-                    <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
-                </transition>
+                <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
             </div>
         </section>
     </article>
@@ -45,7 +43,6 @@
             var _this = this;
             axios.get('https://www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/vote_list')
                 .then(function (response) {
-                    console.log(response);
                     var dataVote = response.data.vote;
                     for(var i in dataVote){
                         dataVote[i].cur = false;  //用来判断是否是当前页面
@@ -271,7 +268,7 @@
         background-color: transparent;
     }
 
-    /*ul列表过渡效果*/
+    /*过渡效果*/
     .flip-list-enter-active {
         transition: all .8s .4s ease-out;
     }
@@ -286,6 +283,4 @@
         opacity: 0;
         transform: translateX(-20%);
     }
-    /*ul列表下面的a标签*/
-
 </style>
