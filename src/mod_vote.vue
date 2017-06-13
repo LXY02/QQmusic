@@ -11,18 +11,6 @@
         </nav>
         <section class="vote__bd js_vote_wrap">
             <div class="vote__bd_box js_vote_wrapbox cur" data-index="0" data-voteset="94" style="transform: translateX(0%);">
-                <!--<ul class="vote_list js_vote_list" data-voteset="94">-->
-                    <!--<li class="js_vote_item vote_list__item vote_list__count&#45;&#45;top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr">-->
-                        <!--<a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>-->
-                        <!--<span class="vote_list__txt c_txt1">{{item.title}}</span>-->
-                        <!--<a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">-->
-                            <!--<svg class="icon_svg c_txt1 icon_play_r">-->
-                                <!--<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>-->
-                            <!--</svg>-->
-                        <!--</a>-->
-                        <!--<span class="vote_list__count vote_list__count&#45;&#45;top c_txt3">{{item.randomNum}}票</span>-->
-                    <!--</li>-->
-                <!--</ul>-->
                 <transition-group tag="ul" name="flip-list" class="vote_list js_vote_list" data-voteset="94">
                     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr" :key="item.randomNum">
                         <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>
@@ -48,7 +36,7 @@
             return {
                 dataArr: [],  //用来存放ajax请求到的数据里的vote数据
                 currArr: [],  //用来存放当前点击页面歌曲排行的信息
-                styleObject: {}
+                styleObject: {}  //用来存放导航条点击会移动相应位置的css样式
             }
         },
         created() {
