@@ -61,36 +61,36 @@
             </defs>
         </svg>
         <ul class="hit_list hit_list--special js_song_list" data-songids="202715897,202715902,202715903,202715900,202715901,202715898,202715899">
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715898" :data-mid="list.Ftrack_mid" v-for="(list,index) in arr">
+            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" :data-id="item.Ftrack_id" :data-mid="item.Ftrack_mid" v-for="(item,index) in arr">
             <span class="hit_list__index c_txt3 js_order_index">{{index+1}}</span>
             <a class="hit_list__avatar">
-                <img :src="list.Fh5_photo_url + '?max_age=2592000'" class="hit_list__avatar_img" alt="">
+                <img :src="item.Fh5_photo_url + '?max_age=2592000'" class="hit_list__avatar_img" alt="">
             </a>
             <div class="hit_list__bd">
                 <div class="hit_list__info">
                     <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">{{list.Ftrack_name}}</h3>
-                        <p class="hit_list__desc c_txt1">{{list.Fsinger_name}}</p>
+                        <h3 class="hit_list__tit c_txt1">{{item.Ftrack_name}}</h3>
+                        <p class="hit_list__desc c_txt1">{{item.Fsinger_name}}</p>
                     </div>
                     <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715898" data-mid="003Y6iQH23fbk8" data-no="509" @click="list.vote++">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715898" data-num="149583">{{list.vote}}票</span>
+                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" :data-id="item.Ftrack_id" data-mid="003Y6iQH23fbk8" data-no="509" @click="item.vote++">投票</a>
+                        <span class="hit_list__count c_txt1 js_vote_num" :data-id="item.Ftrack_id" data-num="149583">{{item.vote}}票</span>
                     </div>
 
                 </div>
                 <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715898">
+                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" :data-id="item.Ftrack_id" @click="onClick(item)">
                         <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="item.isplaying ? '#pause' : '#play'"></use>
                         </svg>
                     </a>
 
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715898">
+                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" :data-id="item.Ftrack_id">
                         <svg class="icon_svg c_txt1">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
                         </svg>
                     </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="一样的月光-金志文" data-songid="202715898" data-desc="一样的月光">
+                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="一样的月光-金志文" :data-songid="item.Ftrack_id" data-desc="一样的月光">
                         <svg class="icon_svg c_txt1">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
                         </svg>
@@ -106,11 +106,25 @@
     </section>
 </template>
 <script>
+
     import axios from 'axios';
     export default {
         data () {
             return {
                 arr:[]
+            }
+        },
+        methods:{
+            onClick:function(item){
+                this.arr.forEach(function(curr){
+                    if(item == curr){
+                        curr.isplaying = !curr.isplaying
+                    }else{
+                        curr.isplaying= false;
+                    }
+                });
+                this.$emit('curr.Ftrack_mid')
+                console.log(item.Ftrack_mid);
             }
         },
         created(){
@@ -122,13 +136,13 @@
             })
                     .then(function(response){
                         response.data.songs.sort(function(a,b){
-                            console.log(a.vote);
-                            return b.vote- a.vote
+                            return b.vote - a.vote
+                        })
+                        response.data.songs.forEach(function(item){
+                            item.isplaying = false;
                         })
                         _this.arr = response.data.songs;
 
-                        console.log(_this.arr);
-                        console.log(response);
                     })
                     .catch(function(error){
 //                        console.log(error);
