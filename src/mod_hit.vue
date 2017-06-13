@@ -39,234 +39,6 @@
                 </div>
             </div>
         </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715902" data-mid="004H79oC0u54f9">
-            <span class="hit_list__index c_txt3 js_order_index">2</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108412.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">空窗</h3>
-                        <p class="hit_list__desc c_txt1">A-Lin</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715902" data-mid="004H79oC0u54f9" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715902" data-num="110858">110858票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715902">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715902">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="空窗-A-Lin" data-songid="202715902" data-desc="空窗">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715897" data-mid="003zIjTB1MZQsY">
-            <span class="hit_list__index c_txt3 js_order_index">3</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108411.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">我不睡</h3>
-                        <p class="hit_list__desc c_txt1">黄国伦</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715897" data-mid="003zIjTB1MZQsY" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715897" data-num="48329">48329票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715897">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715897">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="我不睡-黄国伦" data-songid="202715897" data-desc="我不睡">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715901" data-mid="002Evnyc4RM0l2">
-            <span class="hit_list__index c_txt3 js_order_index">4</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108415.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">爱得太多</h3>
-                        <p class="hit_list__desc c_txt1">王杰 / 黄绮珊</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715901" data-mid="002Evnyc4RM0l2" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715901" data-num="36035">36035票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715901">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715901">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="爱得太多-王杰" data-songid="202715901" data-desc="爱得太多">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715899" data-mid="000qjU3Z0HB7QW">
-            <span class="hit_list__index c_txt3 js_order_index">5</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108417.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">一样的月光</h3>
-                        <p class="hit_list__desc c_txt1">徐佳莹 / 金志文</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715899" data-mid="000qjU3Z0HB7QW" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715899" data-num="25071">25071票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715899">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715899">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="一样的月光-徐佳莹" data-songid="202715899" data-desc="一样的月光">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715903" data-mid="001tYNmX3q7r3e">
-            <span class="hit_list__index c_txt3 js_order_index">6</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108413.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">空窗</h3>
-                        <p class="hit_list__desc c_txt1">辛晓琪 / A-Lin</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715903" data-mid="001tYNmX3q7r3e" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715903" data-num="12820">12820票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715903">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715903">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="空窗-辛晓琪" data-songid="202715903" data-desc="空窗">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715900" data-mid="001qI5qE3Ot6ye">
-            <span class="hit_list__index c_txt3 js_order_index">7</span>
-            <a class="hit_list__avatar">
-                <img src="//y.gtimg.cn/music/common/upload/t_tv_songShow_songs/108414.jpg?max_age=2592000" class="hit_list__avatar_img" alt="">
-            </a>
-            <div class="hit_list__bd">
-                <div class="hit_list__info">
-                    <div class="hit_list__txt">
-                        <h3 class="hit_list__tit c_txt1">爱得太多</h3>
-                        <p class="hit_list__desc c_txt1">黄绮珊</p>
-                    </div>
-
-                    <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715900" data-mid="001qI5qE3Ot6ye" data-no="509">投票</a>
-                        <span class="hit_list__count c_txt1 js_vote_num" data-id="202715900" data-num="9831">9831票</span>
-                    </div>
-
-                </div>
-                <div class="hit_list__control">
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_playsong" title="播放" data-id="202715900">
-                        <svg class="icon_svg c_txt1 icon_play_r">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                        </svg>
-                    </a>
-
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_downsong" title="下载" data-id="202715900">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </a>
-                    <a href="javascript:;" class="hit_list__control_item c_txt1 js_share" title="分享" data-title="爱得太多-黄绮珊" data-songid="202715900" data-desc="爱得太多">
-                        <svg class="icon_svg c_txt1">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </li>
         </ul>
         <div class="hit__ft">
             <a href="javascript:;" class="hit__more c_txt1 js_dlg_show" data-dlg="toprule" data-tj="showhotrule">打榜规则 &gt;</a>
@@ -274,8 +46,8 @@
         </div>
     </section>
 </template>
-
 <script>
+    import axios from 'axios';
     export default {
         data () {
             return {}
@@ -284,5 +56,218 @@
 </script>
 
 <style>
+    .mod_hit {
+        margin: 0 10px 32px
+    }
+    .hit__ft {
+        margin-top: 10px;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center
+    }
 
+    .hit__more {
+        display: block;
+        margin: 0 24px;
+        font-size: 12px;
+        color: #000;
+        opacity: .8
+    }
+
+    .hit_list {
+        margin: -1px 0
+    }
+
+    .hit_list__item {
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-align: stretch;
+        padding: 1px 0
+    }
+
+    .hit_list__item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        z-index: 1;
+        -webkit-box-sizing: border-box;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: currentColor;
+        display: none
+    }
+
+    .hit_list__index {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        width: 22px;
+        font-size: 16px;
+        color: #000
+    }
+
+    .hit_list__avatar {
+        position: relative;
+        display: block;
+        margin-right: 8px;
+        width: 60px;
+        height: 60px
+    }
+
+    .hit_list__avatar_img {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+
+    .hit_list__bd {
+        position: relative;
+        -webkit-box-flex: 1;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-orient: vertical
+    }
+
+    .hit_list__bd::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: -10px;
+        height: 0;
+        z-index: 1;
+        -webkit-box-sizing: border-box;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+    }
+
+    .hit_list__info {
+        display: -webkit-box;
+        -webkit-box-align: center
+    }
+
+    .hit_list__txt {
+        margin-right: 4px;
+        -webkit-box-flex: 1
+    }
+
+    .hit_list__tit {
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis
+    }
+
+    .hit_list__desc {
+        font-size: 12px;
+        color: #000;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        opacity: .8
+    }
+
+    .hit_list__btn {
+        display: block;
+        width: 58px;
+        height: 22px;
+        line-height: 20px;
+        font-size: 13px;
+        color: #000;
+        text-align: center;
+        border: solid 1px currentColor;
+        border-radius: 22px;
+        -webkit-box-sizing: border-box;
+        background-color: transparent
+    }
+
+    .hit_list__btn.disable {
+        opacity: .3
+    }
+
+    .hit_list__count {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        color: #000;
+        text-align: center;
+        opacity: .8
+    }
+
+    .hit_list__control {
+        display: -webkit-box;
+        -webkit-box-align: center
+    }
+
+    .hit_list__control_item {
+        position: relative;
+        display: block;
+        margin-right: 2px;
+        width: 40px;
+        height: 26px;
+        color: #000;
+        opacity: .3
+    }
+
+    .hit_list__control_item .icon_svg {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        fill: currentColor
+    }
+
+    .hit_list__control_item:last-child .icon_svg {
+        top: 10px;
+        width: 16px;
+        height: 16px
+    }
+
+    .hit_list--special .hit_list__item {
+        position: relative;
+        padding: 6px 0
+    }
+
+    .hit_list--special .hit_list__item::after {
+        display: block
+    }
+
+    .hit_list--special .hit_list__index {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding-top: 12px;
+        width: auto;
+        height: 100%;
+        font-size: 25px
+    }
+
+    .hit_list--special .hit_list__item:first-child .hit_list__index {
+        margin: 0 0 0 -8px;
+        font-size: 50px
+    }
+
+    .hit_list--special .hit_list__avatar {
+        margin-right: 16px;
+        width: auto;
+        height: auto;
+        zoom:.5}
+
+    .hit_list--special .hit_list__bd::after {
+        display: none
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        .hit_list__bd::after,.hit_list__item::after {
+            -webkit-transform:scaleY(.5)
+        }
+    }
 </style>
