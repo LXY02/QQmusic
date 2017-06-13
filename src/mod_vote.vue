@@ -71,17 +71,8 @@
                 }
                 item.cur = true;
                 _this.currArr = item['Fvote_set'].slice(0);
-                var moveLength;
-                switch (index) {
-                    case 0: moveLength=0; break;
-                    case 1: moveLength=-5; break;
-                    case 2: moveLength=-10; break;
-                    case 3: moveLength=-15; break;
-                    case 4: moveLength=-20; break;
-                }
-                moveLength +='%';
                 _this.styleObject = {
-                    transform: 'translateX('+moveLength+')'
+                    transform: 'translateX('+index*(-5)+'%)'
                 }
             }
         }
