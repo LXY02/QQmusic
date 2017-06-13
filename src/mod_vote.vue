@@ -5,7 +5,8 @@
     export default {
         data () {
             return {
-                name: 'lalalal'
+                name: 'lalalal',
+                age: 1234
             }
         },
     }
