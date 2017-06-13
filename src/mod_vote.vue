@@ -6,49 +6,75 @@
         </header>
         <nav class="vote__nav c_txt1">
             <div class="vote__nav_box js_vote_navbox" style="transform: translateX(20px);">
-                <a href="javascript:;" class="vote__nav_item js_vote_nav cur c_txt3" data-endtime="2017-05-28 23:50:00" data-end="1" data-index="0" data-voteset="94">第十一期</a>
-                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt1" data-endtime="2017-05-22 23:00:00" data-end="1" data-index="1" data-voteset="93">第十期</a>
-                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt1" data-endtime="2017-05-14 23:59:59" data-end="1" data-index="2" data-voteset="92">第九期</a>
-                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt1" data-endtime="2017-05-08 23:59:59" data-end="1" data-index="3" data-voteset="91">第八期</a>
-                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt1" data-endtime="2017-05-02 23:59:59" data-end="1" data-index="4" data-voteset="90">第七期</a>
+                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt3" :class="{cur: item.cur}" data-endtime="2017-05-28 23:50:00" data-end="1" data-index="0" data-voteset="94" v-for="item in dataArr" @click="clickA(item)">{{item.Fvote_title}}</a>
             </div>
         </nav>
         <section class="vote__bd js_vote_wrap">
             <div class="vote__bd_box js_vote_wrapbox cur" data-index="0" data-voteset="94" style="transform: translateX(0%);">
                 <ul class="vote_list js_vote_list" data-voteset="94">
-                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94">
+                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr">
                         <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>
-                            <span class="vote_list__txt c_txt1">范晓萱《Tell Her》</span>
-                            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">
-                                <svg class="icon_svg c_txt1 icon_play_r">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
-                                </svg>
-                            </a>
-                            <span class="vote_list__count vote_list__count--top c_txt3">40021票</span>
+                        <span class="vote_list__txt c_txt1">{{item.title}}</span>
+                        <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">
+                            <svg class="icon_svg c_txt1 icon_play_r">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
+                            </svg>
+                        </a>
+                        <span class="vote_list__count vote_list__count--top c_txt3">{{item.randomNum}}票</span>
                     </li>
                 </ul>
                 <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
             </div>
-
-            <div class="vote__bd_box js_vote_wrapbox " data-index="1" data-voteset="93" style="transform: translateX(0%);"></div>
-
-            <div class="vote__bd_box js_vote_wrapbox " data-index="2" data-voteset="92" style="transform: translateX(0%);"></div>
-
-            <div class="vote__bd_box js_vote_wrapbox" data-index="3" data-voteset="91" style="transform: translateX(0%);">     <ul class="vote_list js_vote_list" data-voteset="91">          <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="91003" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91003" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">动物世界</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="201452010">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count vote_list__count--top c_txt3">21万票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="91007" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91007" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">暧昧</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="201697348">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count vote_list__count--top c_txt3">20万票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="91004" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91004" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">我害怕</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="201974489">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count vote_list__count--top c_txt3">79962票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91008" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91008" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">高尚</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="201213781">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">78673票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91010" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91010" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">一半</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="104792679">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">70142票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91009" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91009" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">其实</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="104775877">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">60347票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91005" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91005" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">下雨了</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="102636800">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">51707票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91001" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91001" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">未完成的歌</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="647946">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">41383票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91002" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91002" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">你过得好吗</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="1308680">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">36716票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="91006" data-voteset="91">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="91006" data-voteset="91" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">小孩</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="104674830">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">36397票</span>     </li>    <!--  -->           </ul>     <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="91">已结束</a> </div>
-
-            <div class="vote__bd_box js_vote_wrapbox" data-index="4" data-voteset="90" style="transform: translateX(0%);">     <ul class="vote_list js_vote_list" data-voteset="90">          <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="90001" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90001" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">伍思凯《爱与愁》</span>            <span class="vote_list__count vote_list__count--top c_txt3">40284票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="90010" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90010" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">陈慧琳《是我不好》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="9826">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count vote_list__count--top c_txt3">39042票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="90009" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90009" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">蔡健雅《伸伸懒腰》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="7242283">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count vote_list__count--top c_txt3">34285票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90008" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90008" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">曹格《爱转动》</span>            <span class="vote_list__count c_txt1">31529票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90006" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90006" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">动力火车《单程车票》</span>            <span class="vote_list__count c_txt1">27993票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90004" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90004" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">老狼《昨天今天》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="102346650">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">27286票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90003" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90003" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">黄绮珊《爱是什么》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="105419532">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">24666票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90002" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90002" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">罗大佑《传说》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="7230885">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">17722票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90005" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90005" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">阿杜《一个人住》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="101458">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">14425票</span>     </li>    <!--  -->             <!--  -->     <li class="js_vote_item vote_list__item" data-id="90007" data-voteset="90">                                          <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="90007" data-voteset="90" style="display: none;"></a>                           <span class="vote_list__txt c_txt1">崔健《不是我不明白》</span>            <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="2464725">       <svg class="icon_svg c_txt1 icon_play_r">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>       </svg>      </a>            <span class="vote_list__count c_txt1">12754票</span>     </li>    <!--  -->           </ul>     <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="90">已结束</a> </div>
-
         </section>
     </article>
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         data () {
             return {
-
+                dataArr: [],
+                currArr: []
             }
         },
+        created() {
+            var _this = this;
+            axios.get('https://www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/vote_list')
+                .then(function (response) {
+                    var dataVote = response.data.vote;
+                    for(var i in dataVote){
+                        dataVote[i].cur = false;  //用来判断是否是当前页面
+                        for(var j in dataVote[i]['Fvote_set']) {
+                            dataVote[i]['Fvote_set'][j].randomNum = parseInt(Math.random()*50000);//随机一个投票数量
+                        }
+                        _this.dataArr.push(dataVote[i]);
+                    }
+                    _this.dataArr.reverse();
+                    _this.dataArr[0].cur = true; //初始第一项为选中项
+                    _this.currArr = _this.dataArr[0]['Fvote_set'].slice(0);
+                    _this.currArr.sort(function (a,b) {
+                       return b.randomNum - a.randomNum;
+                    });
+                    console.log(_this.dataArr);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+        methods: {
+            clickA: function (item) {
+                var _this = this;
+                for(var i in _this.dataArr){
+                    _this.dataArr[i].cur = false; //将之前的选中样式去掉
+                }
+                item.cur = true;
+                _this.currArr = item['Fvote_set'].slice(0);
+                _this.currArr.sort(function (a,b) {
+                    return b.randomNum - a.randomNum;
+                });
+            }
+        }
     }
 </script>
 
@@ -59,10 +85,6 @@
     .mod_vote {
         position: relative;
         margin: 0 10px 36px;
-    }
-    .mod_vote::before {
-        left: 0;
-        border-right: none;
     }
     .mod_vote::after, .mod_vote::before {
         content: "";
@@ -75,6 +97,10 @@
         -webkit-box-sizing: border-box;
         opacity: .05;
         background-color: transparent;
+    }
+    .mod_vote::before {
+        left: 0;
+        border-right: none;
     }
     .mod_vote::after {
         right: 0;
@@ -94,4 +120,152 @@
         margin-top: 6px;
         font-size: 16px;
     }
+    .vote__nav {
+        position: relative;
+        margin: 0 32px 18px;
+        overflow: hidden;
+    }
+    .vote__nav::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        z-index: 1;
+        -webkit-box-sizing: border-box;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: currentColor;
+        opacity: .5;
+    }
+    .vote__nav_box {
+        display: -webkit-box;
+        -webkit-box-align: center;
+    }
+    .vote__nav_item.cur {
+        opacity: 1;
+    }
+    .vote__nav_item {
+        position: relative;
+        display: block;
+        padding: 0 0 3px;
+        width: 23%;
+        font-size: 14px;
+        color: #000;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        opacity: .8;
+    }
+    .vote__nav_item.cur::after {
+        display: block;
+    }
+    .vote__nav_item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -4px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px;
+        border-color: transparent transparent currentColor transparent;
+        display: none;
+    }
+    .vote__bd {
+        margin: 0 36px;
+        display: -webkit-box;
+        overflow: hidden;
+    }
+    .vote__bd_box {
+        display: block;
+        width: 100%;
+        -webkit-transition: all .3s linear;
+    }
+    .vote_list {
+        overflow: hidden;
+    }
+    .vote_list__item {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        width: 100%;
+    }
+    li {
+        list-style: none;
+    }
+    .vote_list__check {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 32px;
+        color: #000;
+        opacity: .7;
+    }
+    .vote_list__check::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 14px;
+        height: 14px;
+        border: solid 1px currentColor;
+        border-radius: 2px;
+        background-color: transparent;
+    }
+    a, a:hover {
+        text-decoration: none;
+    }
+    .vote_list__txt {
+        display: block;
+        -webkit-box-flex: 1;
+        font-size: 14px;
+        color: #000;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .vote_list__play {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 32px;
+        color: #000;
+    }
+    .vote_list__play .icon_svg {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        opacity: .3;
+    }
+
+    .vote_list__count {
+        display: block;
+        margin-left: 12px;
+        width: 60px;
+        font-size: 12px;
+        color: #000;
+    }
+    .vote__btn.disable {
+        opacity: .4;
+    }
+    .vote__btn {
+        display: table;
+        margin: 14px auto 0;
+        padding: 0 10px;
+        min-width: 114px;
+        height: 30px;
+        line-height: 28px;
+        font-size: 16px;
+        color: #000;
+        text-align: center;
+        border: solid 1px currentColor;
+        border-radius: 30px;
+        -webkit-box-sizing: border-box;
+        background-color: transparent;
+    }
+
 </style>
