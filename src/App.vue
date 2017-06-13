@@ -13,13 +13,13 @@
 </template>
 
 <script>
-	import modTop from './mod_top.vue'
-	import modHit from './mod_hit.vue'
-	import modVote from './mod_vote.vue'
-	import modRank from './mod_rank.vue'
-	import modPlaylist from './mod_playlist.vue'
-	import modFriendlink from './mod_friendlink.vue'
-	import modComment from './mod_comment.vue'
+	import mod_top from './mod_top.vue'
+	import mod_hit from './mod_hit.vue'
+	import mod_vote from './mod_vote.vue'
+	import mod_rank from './mod_rank.vue'
+	import mod_playlist from './mod_playlist.vue'
+	import mod_friendlink from './mod_friendlink.vue'
+	import mod_comment from './mod_comment.vue'
 	export default {
 		name: 'app',
 		data () {
@@ -28,18 +28,30 @@
 			}
 		},
 		components: {
-			modTop,
-			modHit,
-			modVote,
-			modRank,
-			modPlaylist,
-			modFriendlink,
-			modComment
+			mod_top,
+			mod_hit,
+			mod_vote,
+			mod_rank,
+			mod_playlist,
+			mod_friendlink,
+			mod_comment
 		}
 	}
 </script>
 
 <style>
+	html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) }
+	a, img { -webkit-touch-callout: none }
+	body, dd, dl, form, h1, h2, h3, h4, h5, h6, input, ol, p, td, textarea, th, ul { margin: 0; padding: 0 }
+	h1, h2, h3, h4, h5, h6 { font-size: 100% }
+	li { list-style: none }
+	table { border-collapse: collapse; border-spacing: 0 }
+	button:focus, input:focus, textarea:focus { outline: 0 }
+	a, a:hover { text-decoration: none }
+	button, input, select, textarea { font-family: inherit; font-size: 100% }
+	body { font: 12px/1.5 FZLTXIHJW--GB1-0, "hiragino sans gb", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif }
+	.hide { position: absolute; width: 0; height: 0; overflow: hidden; opacity: 0 }
+
 	/*自由配置项_S*/
 	.c_txt3{color:#2b2321;}/*高亮字色、镂空按钮色*/
 	.c_bg1{background-color:#f1ece6;}/*页面背景色*/
@@ -55,4 +67,5 @@
 
 
 	.popup_history__cont{-webkit-overflow-scrolling: touch;margin-top: 32px;overflow: scroll;overflow-x: hidden;height: 100%}
+
 </style>
