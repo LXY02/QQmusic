@@ -61,7 +61,7 @@
             </defs>
         </svg>
         <ul class="hit_list hit_list--special js_song_list" data-songids="202715897,202715902,202715903,202715900,202715901,202715898,202715899">
-            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715898" data-mid="003Y6iQH23fbk8" v-for="(list,index) in arr">
+            <li class="hit_list__item c_bor1 js_curlist_song js_playsongcon" data-id="202715898" :data-mid="list.Ftrack_mid" v-for="(list,index) in arr">
             <span class="hit_list__index c_txt3 js_order_index">{{index+1}}</span>
             <a class="hit_list__avatar">
                 <img :src="list.Fh5_photo_url + '?max_age=2592000'" class="hit_list__avatar_img" alt="">
@@ -72,9 +72,8 @@
                         <h3 class="hit_list__tit c_txt1">{{list.Ftrack_name}}</h3>
                         <p class="hit_list__desc c_txt1">{{list.Fsinger_name}}</p>
                     </div>
-
                     <div class="hit_list__other js_hit_div">
-                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715898" data-mid="003Y6iQH23fbk8" data-no="509">投票</a>
+                        <a href="javascript:;" class="hit_list__btn c_txt1 js_hitbtn" data-voted="0" data-id="202715898" data-mid="003Y6iQH23fbk8" data-no="509" @click="list.vote++">投票</a>
                         <span class="hit_list__count c_txt1 js_vote_num" data-id="202715898" data-num="149583">{{list.vote}}票</span>
                     </div>
 
