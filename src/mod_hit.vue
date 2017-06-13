@@ -1,5 +1,5 @@
 <template>
-
+    <section class="mod_hit"></section>
 </template>
 
 <script>
