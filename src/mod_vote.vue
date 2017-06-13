@@ -5,8 +5,8 @@
             <p class="tit__desc">投票截止时间：5月28日24点</p>
         </header>
         <nav class="vote__nav c_txt1">
-            <div class="vote__nav_box js_vote_navbox" style="transform: translateX(20px);">
-                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt3" :class="{cur: item.cur}" data-endtime="2017-05-28 23:50:00" data-end="1" data-index="0" data-voteset="94" v-for="item in dataArr" @click="clickA(item)">{{item.Fvote_title}}</a>
+            <div class="vote__nav_box js_vote_navbox" :style="styleObject">
+                <a href="javascript:;" class="vote__nav_item js_vote_nav c_txt3" :class="{cur: item.cur}" data-endtime="2017-05-28 23:50:00" data-end="1" data-index="0" data-voteset="94" v-for="(item,index) in dataArr" @click="clickA(item,index)">{{item.Fvote_title}}</a>
             </div>
         </nav>
         <section class="vote__bd js_vote_wrap">
@@ -47,7 +47,8 @@
         data () {
             return {
                 dataArr: [],  //用来存放ajax请求到的数据里的vote数据
-                currArr: []  //用来存放当前点击页面歌曲排行的信息
+                currArr: [],  //用来存放当前点击页面歌曲排行的信息
+                styleObject: {}
             }
         },
         created() {
@@ -75,13 +76,25 @@
                 });
         },
         methods: {
-            clickA: function (item) {
+            clickA: function (item,index) {
                 var _this = this;
                 for(var i in _this.dataArr){
                     _this.dataArr[i].cur = false; //将之前的选中样式去掉
                 }
                 item.cur = true;
                 _this.currArr = item['Fvote_set'].slice(0);
+                var moveLength;
+                switch (index) {
+                    case 0: moveLength=0; break;
+                    case 1: moveLength=-5; break;
+                    case 2: moveLength=-10; break;
+                    case 3: moveLength=-15; break;
+                    case 4: moveLength=-20; break;
+                }
+                moveLength +='%';
+                _this.styleObject = {
+                    transform: 'translateX('+moveLength+')'
+                }
             }
         }
     }
