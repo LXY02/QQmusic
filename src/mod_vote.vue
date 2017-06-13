@@ -23,7 +23,9 @@
                         <span class="vote_list__count vote_list__count--top c_txt3">{{item.randomNum}}票</span>
                     </li>
                 </transition-group>
-                <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
+                <transition name="activityStatement">
+                    <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
+                </transition>
             </div>
         </section>
     </article>
