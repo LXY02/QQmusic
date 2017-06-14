@@ -12,7 +12,7 @@
         <section class="vote__bd js_vote_wrap">
             <div class="vote__bd_box js_vote_wrapbox cur" data-index="0" data-voteset="94" style="transform: translateX(0%);">
                 <transition-group tag="ul" name="flip-list" class="vote_list js_vote_list" data-voteset="94">
-                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr" :key="item.randomNum">
+                    <li class="js_vote_item vote_list__item vote_list__count--top c_txt3" data-id="94001" data-voteset="94" v-for="item in currArr['Fvote_set']" :key="item.randomNum">
                         <a href="javascript:;" class="vote_list__check c_txt1 js_vote_sel " data-id="94001" data-voteset="94" style="display: none;"></a>
                         <span class="vote_list__txt c_txt1">{{item.title}}</span>
                         <a href="javasript:;" class="vote_list__play c_txt1 js_playsong_btn" title="播放" data-id="133020">
@@ -23,9 +23,7 @@
                         <span class="vote_list__count vote_list__count--top c_txt3">{{item.randomNum}}票</span>
                     </li>
                 </transition-group>
-                <transition name="activityStatement">
-                    <a href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">已结束</a>
-                </transition>
+                    <a  href="javascript:;" class="vote__btn c_txt1 disable" data-voteset="94">{{activityStatementMsg}}</a>
             </div>
         </section>
     </article>
@@ -37,7 +35,7 @@
         data () {
             return {
                 dataArr: [],  //用来存放ajax请求到的数据里的vote数据
-                currArr: [],  //用来存放当前点击页面歌曲排行的信息
+                currArr: {},  //用来存放当前点击页面歌曲排行的信息
                 styleObject: {}  //用来存放导航条点击会移动相应位置的css样式
             }
         },
@@ -58,7 +56,8 @@
                     }
                     _this.dataArr.reverse();
                     _this.dataArr[0].cur = true; //初始第一项为选中项
-                    _this.currArr = _this.dataArr[0]['Fvote_set'].slice(0);
+//                    _this.currArr = _this.dataArr[0]['Fvote_set'].slice(0);
+                    _this.currArr = _this.dataArr[0];
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -71,10 +70,20 @@
                     _this.dataArr[i].cur = false; //将之前的选中样式去掉
                 }
                 item.cur = true;
-                _this.currArr = item['Fvote_set'].slice(0);
+//                _this.currArr = item['Fvote_set'].slice(0);
+                _this.currArr = item;
                 _this.styleObject = {
                     transform: 'translateX('+index*(-5)+'%)'
                 }
+            }
+        },
+        computed: {
+            activityStatementMsg: function () {   //当前选中期的活动是否已经结束判断
+                var _this = this;
+                var result;
+                var deadline = new Date(_this.currArr['Fvote_endTime']);
+                var nowDate = new Date();
+                return deadline < nowDate ? '已结束' : '进行中';
             }
         }
     }
@@ -285,4 +294,5 @@
         opacity: 0;
         transform: translateX(-20%);
     }
+
 </style>
