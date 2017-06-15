@@ -49,7 +49,7 @@
 </template>
 <script type="text/ecmascript-6">
 	import axios from 'axios';
-	import { bus } from './bus.js'
+	import {bus} from './bus.js'
 	export default {
 		data () {
 			return {
@@ -57,11 +57,11 @@
 			}
 		},
 		methods: {
-			onClick: function (item) {
+			onClick (item) {
 				this.arr.forEach(curr => {
 					if (item == curr) {
 						curr.isplaying = !curr.isplaying
-						if(curr.isplaying) {
+						if (curr.isplaying) {
 							this.$emit('playMusic', item.Ftrack_mid);
 						} else {
 							this.$emit('pauseMusic');
