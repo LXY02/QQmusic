@@ -17,6 +17,7 @@
         methods: {
             onPlayAll: function () {
                 bus.$emit('playAll');
+                console.log('@@xx');
             }
         }
     }

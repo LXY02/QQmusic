@@ -89,12 +89,7 @@
 			})
 
 			bus.$on('playAll', () => {
-				var midArr = this.arr.map((item, index) => {
-					return {
-						Ftrack_mid: item.Ftrack_mid,
-						index: index
-					};
-				});
+				var midArr = this.arr.map((item, index) => index);
 				this.$emit('playMusic', midArr);
 			})
 
