@@ -38,8 +38,7 @@
 			}
 		},
 		created () {
-			var audio = new Audio();
-			this.audio = audio;
+			this.audio = new Audio();
 		},
 		components: {
 			mod_top,
