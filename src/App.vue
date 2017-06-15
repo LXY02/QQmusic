@@ -30,7 +30,10 @@
 				if(this.audio.paused == false) {
 					this.pauseMusic();
 				}
-				this.audio.src = 'http://isure.stream.qqmusic.qq.com/C100' + Ftrack_mid + '.m4a?fromtag=32';
+				if(this.audio.Ftrack_mid != Ftrack_mid) {
+					this.audio.src = 'http://isure.stream.qqmusic.qq.com/C100' + Ftrack_mid + '.m4a?fromtag=32';
+				}
+				this.audio.Ftrack_mid = Ftrack_mid;
 				this.audio.play();
 			},
 			pauseMusic () {
