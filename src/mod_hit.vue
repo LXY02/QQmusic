@@ -57,7 +57,7 @@
 			}
 		},
 		methods: {
-			onClick: (item) => {
+			onClick: function (item) {
 				this.arr.forEach(curr => {
 					if (item == curr) {
 						curr.isplaying = !curr.isplaying
@@ -90,7 +90,10 @@
 
 			bus.$on('playAll', () => {
 				var midArr = this.arr.map((item, index) => {
-					return index;
+					return {
+						Ftrack_mid: item.Ftrack_mid,
+						index: index
+					};
 				});
 				this.$emit('playMusic', midArr);
 			})
