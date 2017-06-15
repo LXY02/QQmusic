@@ -41,7 +41,7 @@
         },
         created() {
             var _this = this;
-            axios.get('https://www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/vote_list')
+            axios.get('//www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/vote_list')
                 .then(function (response) {
                     var dataVote = response.data.vote;
                     for(var i in dataVote){

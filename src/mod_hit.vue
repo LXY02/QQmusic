@@ -129,7 +129,7 @@
         },
         created(){
             var _this = this;
-            axios.get('https://www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/hit_list',{
+            axios.get('//www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/hit_list',{
                 params:{
                     jsonp_params_name:'callback'
                 }

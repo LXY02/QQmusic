@@ -8,15 +8,13 @@
         </header>
         <section class="friendLink__bd">
             <ul class="friendLink_list">
-                <li class="friendLink_list__item js_topic_click" data-id="98"
-                    data-href="https://y.qq.com/m/act/singer/index.html?ADTAG=jinqulao">
+                <li class="friendLink_list__item js_topic_click" data-id="98">
                     <img src="./assets/friendlink1.png"
                          class="friendLink_list__img" alt="歌手总决赛，歌王之战！">
                     <h3 class="friendLink_list__txt c_txt1">歌手总决赛，歌王之战！</h3>
                     <p class="friendLink_list__desc c_txt1"></p>
                 </li>
-                <li class="friendLink_list__item js_topic_click" data-id="93"
-                    data-href="https://y.qq.com/n/yqq/playlist/1763101734.html">
+                <li class="friendLink_list__item js_topic_click" data-id="93">
                     <img src="./assets/friendlist2.png"
                          class="friendLink_list__img" alt="萌娃唱歌，天籁童声给你好听！">
                     <h3 class="friendLink_list__txt c_txt1">萌娃唱歌，天籁童声给你好听！</h3>
