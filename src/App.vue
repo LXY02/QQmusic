@@ -27,7 +27,7 @@
 		},
 		methods: {
 			playMusic (Ftrack_mid) {
-				if(this.audio.paused == false) {
+				if(!this.audio.paused) {
 					this.pauseMusic();
 				}
 				if(this.audio.Ftrack_mid != Ftrack_mid) {
