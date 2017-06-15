@@ -89,6 +89,13 @@
 			})
 
 			bus.$on('playAll', () => {
+				this.arr.forEach(item => {
+					if(item.isplaying) {
+						item.isplaying = false;
+						this.$emit('stopMusic');
+					}
+				})
+
 				var midArr = this.arr.map((item, index) => index);
 				this.$emit('playMusic', midArr);
 			})

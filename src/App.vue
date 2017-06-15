@@ -2,7 +2,7 @@
 	<div id="app">
 		<section class="wrap js_warp">
 			<mod_top></mod_top>
-			<mod_hit @playMusic="playMusic" @pauseMusic="pauseMusic"></mod_hit>
+			<mod_hit @playMusic="playMusic" @pauseMusic="pauseMusic" @stopMusic="stopMusic"></mod_hit>
 			<mod_vote></mod_vote>
 			<mod_rank></mod_rank>
 			<mod_playlist></mod_playlist>
@@ -48,6 +48,10 @@
 			},
 			pauseMusic () {
 				this.audio.pause();
+			},
+			stopMusic() {
+				this.audio.pause();
+				this.audio.currentTime = 0;
 			}
 		},
 		created () {
