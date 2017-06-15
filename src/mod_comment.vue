@@ -2,7 +2,14 @@
 	<div class="mod_comment">
 		<h2 class="comment__tit c_txt1">精彩评论</h2>
 		<div class="comment__bd">
-			<newpin_cont :arr="hotArr" title="热评"></newpin_cont>
+			<newpin_cont :arr="hotArr" title="热评">
+				<div class="comment_add">
+					<div class="comment_add__input_box c_bg2">
+						<input class="comment_add__input c_txt1 js_cmt_input" type="text" placeholder="添加评论">
+					</div>
+					<a class="comment_add__btn c_txt3 js_cmt_btn" href="javascript:;">发布</a>
+				</div>
+			</newpin_cont>
 			<newpin_cont :arr="newArr" title="最新评论"></newpin_cont>
 		</div>
 	</div>
@@ -34,6 +41,9 @@
 	}
 </script>
 <style>
+	.c_txt3 {
+		color: #2B2321;
+	}
 	.comment_add {
 		display: none
 	}

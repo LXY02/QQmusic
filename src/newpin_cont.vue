@@ -1,6 +1,7 @@
 <template>
     <div class="comment_type js_newpin_cont">
         <div class="comment_type__hd c_bor1"><h2 class="comment_type__tit c_txt1">{{ title }}</h2></div>
+        <slot></slot>
         <p class="comment__null c_txt1 c_txt2 js_newpin_nodata" style="display: none;">还没有人评论, 来抢沙发吧</p>
         <ul class="comment_list js_newping">
             <li v-for="(item, index) in arr" class="comment_list__item c_bor1 js_repingContent">
