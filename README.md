@@ -1,6 +1,7 @@
-# jinqulao
+# 金曲捞
 
 > A Vue.js project
+QQ音乐金曲捞 demo
 
 ## Build Setup
 
