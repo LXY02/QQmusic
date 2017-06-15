@@ -39,8 +39,8 @@
                 </div>
             </li>
         </ul>
-        <div class="comment_loading"><a href="javascript:;" class="comment_loading__txt c_txt1 c_txt2 js_newping_more">查看更多</a>
-        </div>
+        <!--<div class="comment_loading"><a href="javascript:;" class="comment_loading__txt c_txt1 c_txt2 js_newping_more">查看更多</a>-->
+        <!--</div>-->
     </div>
 </template>
 <script>
