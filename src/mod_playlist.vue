@@ -35,13 +35,8 @@
         created(){
             var _this = this;
             axios.get('//www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/playlist_list').then(function (response) {
-                console.log(response);
-                console.log(_this);
                 var newArr = response.data.cdlist.slice(0, 3);
-
                 _this.arr = newArr;
-                console.log(_this.arr);
-
             }).catch(function (error) {
                 console.log(error);
             });
