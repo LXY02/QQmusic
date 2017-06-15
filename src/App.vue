@@ -41,7 +41,6 @@
 					}
 					this.audio.Ftrack_mid = Ftrack_mid;
 					this.audio.play();
-					this.audio.playbackRate = 2;
 				} else {
 					this.playList = Ftrack_mid;
 					bus.$emit('playNext', this.playList.shift());
