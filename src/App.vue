@@ -53,19 +53,21 @@
 	.hide { position: absolute; width: 0; height: 0; overflow: hidden; opacity: 0 }
 
 	/*自由配置项_S*/
-	.c_txt3{color:#2b2321;}/*高亮字色、镂空按钮色*/
-	.c_bg1{background-color:#f1ece6;}/*页面背景色*/
+	.c_txt3 { color: #2B2321; }
+	/*高亮字色、镂空按钮色*/
+	.c_bg1 { background-color: #F1ECE6; }
+	/*页面背景色*/
 	/*自由配置项_E*/
 
-
 	/*浅底配色_S*/
-	.c_txt1{color:#2b2322;}/*常应用于正文字色*/
+	.c_txt1 { color: #2B2322; }
+	/*常应用于正文字色*/
 	.c_bor1,
-	.c_bor1::after{border-color:rgba(43,35,34,.1);}
-	.c_bg2{background-color:rgba(0,0,0,.1);}/*常应用于内容块底色*/
+	.c_bor1::after { border-color: rgba(43, 35, 34, .1); }
+	.c_bg2 { background-color: rgba(0, 0, 0, .1); }
+	/*常应用于内容块底色*/
 	/*浅底配色_E*/
 
-
-	.popup_history__cont{-webkit-overflow-scrolling: touch;margin-top: 32px;overflow: scroll;overflow-x: hidden;height: 100%}
+	.popup_history__cont { -webkit-overflow-scrolling: touch; margin-top: 32px; overflow: scroll; overflow-x: hidden; height: 100% }
 
 </style>
