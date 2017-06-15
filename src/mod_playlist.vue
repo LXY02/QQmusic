@@ -27,7 +27,7 @@
 	</article>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 	import axios from 'axios'
 	export default {
 		data () {
@@ -37,10 +37,10 @@
 		},
 		created(){
 			var _this = this;
-			axios.get('//www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/playlist_list').then(function (response) {
+			axios.get('//www.easy-mock.com/mock/593f5d088ac26d795ff1213e/hit-time9/playlist_list').then(response => {
 				var newArr = response.data.cdlist.slice(0, 3);
 				_this.arr = newArr;
-			}).catch(function (error) {
+			}).catch(error => {
 				console.log(error);
 			});
 		}

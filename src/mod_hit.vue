@@ -57,7 +57,7 @@
 			}
 		},
 		methods: {
-			onClick (item) {
+			onClick(item) {
 				this.arr.forEach(curr => {
 					if (item == curr) {
 						curr.isplaying = !curr.isplaying
