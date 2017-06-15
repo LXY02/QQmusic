@@ -2,7 +2,7 @@
 	<div id="app">
 		<section class="wrap js_warp">
 			<mod_top></mod_top>
-			<mod_hit></mod_hit>
+			<mod_hit @playMusic="playMusic" @pauseMusic="pauseMusic"></mod_hit>
 			<mod_vote></mod_vote>
 			<mod_rank></mod_rank>
 			<mod_playlist></mod_playlist>
@@ -23,9 +23,23 @@
 	export default {
 		name: 'app',
 		data () {
-			return {
-
+			return {}
+		},
+		methods: {
+			playMusic (Ftrack_mid) {
+				if(this.audio.paused == false) {
+					this.pauseMusic();
+				}
+				this.audio.src = 'http://isure.stream.qqmusic.qq.com/C100' + Ftrack_mid + '.m4a?fromtag=32';
+				this.audio.play();
+			},
+			pauseMusic () {
+				this.audio.pause();
 			}
+		},
+		created () {
+			var audio = new Audio();
+			this.audio = audio;
 		},
 		components: {
 			mod_top,
@@ -51,7 +65,6 @@
 	button, input, select, textarea { font-family: inherit; font-size: 100% }
 	body { font: 12px/1.5 FZLTXIHJW--GB1-0, "hiragino sans gb", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif }
 	.hide { position: absolute; width: 0; height: 0; overflow: hidden; opacity: 0 }
-
 	/*自由配置项_S*/
 	.c_txt3 { color: #2B2321; }
 	/*高亮字色、镂空按钮色*/

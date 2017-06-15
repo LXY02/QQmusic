@@ -47,8 +47,7 @@
 		</div>
 	</section>
 </template>
-<script>
-
+<script type="text/ecmascript-6">
 	import axios from 'axios';
 	export default {
 		data () {
@@ -58,14 +57,18 @@
 		},
 		methods: {
 			onClick: function (item) {
-				this.arr.forEach(function (curr) {
+				this.arr.forEach(curr => {
 					if (item == curr) {
 						curr.isplaying = !curr.isplaying
+						if(curr.isplaying) {
+							this.$emit('playMusic', item.Ftrack_mid);
+						} else {
+							this.$emit('pauseMusic');
+						}
 					} else {
 						curr.isplaying = false;
 					}
 				});
-				this.$emit('curr.Ftrack_mid')
 			}
 		},
 		created(){
@@ -75,15 +78,13 @@
 					jsonp_params_name: 'callback'
 				}
 			}).then(function (response) {
-				response.data.songs.sort(function (a, b) {
-					return b.vote - a.vote
-				})
-				response.data.songs.forEach(function (item) {
+				response.data.songs.sort((a, b) => b.vote - a.vote);
+				response.data.songs.forEach(item => {
 					item.isplaying = false;
 				})
 				_this.arr = response.data.songs;
-			}).catch(function (error) {
-				console.log(error);
+			}).catch(error => {
+				console.log(error)
 			})
 		}
 	}
