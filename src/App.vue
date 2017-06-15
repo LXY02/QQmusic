@@ -12,7 +12,7 @@
 	</div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 	import mod_top from './mod_top.vue'
 	import mod_hit from './mod_hit.vue'
 	import mod_vote from './mod_vote.vue'
@@ -20,21 +20,32 @@
 	import mod_playlist from './mod_playlist.vue'
 	import mod_friendlink from './mod_friendlink.vue'
 	import mod_comment from './mod_comment.vue'
+
+	import { bus } from './bus.js'
+
 	export default {
 		name: 'app',
 		data () {
-			return {}
+			return {
+				playList: []
+			}
 		},
 		methods: {
 			playMusic (Ftrack_mid) {
-				if(!this.audio.paused) {
-					this.pauseMusic();
+				if(typeof Ftrack_mid == 'string') {
+					if(!this.audio.paused) {
+						this.pauseMusic();
+					}
+					if(this.audio.Ftrack_mid != Ftrack_mid) {
+						this.audio.src = 'http://isure.stream.qqmusic.qq.com/C100' + Ftrack_mid + '.m4a?fromtag=32';
+					}
+					this.audio.Ftrack_mid = Ftrack_mid;
+					this.audio.play();
+					this.audio.playbackRate = 2;
+				} else {
+					this.playList = Ftrack_mid;
+					bus.$emit('playNext', this.playList.shift());
 				}
-				if(this.audio.Ftrack_mid != Ftrack_mid) {
-					this.audio.src = 'http://isure.stream.qqmusic.qq.com/C100' + Ftrack_mid + '.m4a?fromtag=32';
-				}
-				this.audio.Ftrack_mid = Ftrack_mid;
-				this.audio.play();
 			},
 			pauseMusic () {
 				this.audio.pause();
@@ -42,6 +53,11 @@
 		},
 		created () {
 			this.audio = new Audio();
+			this.audio.addEventListener('ended', () => {
+				if(this.playList.length) {
+					bus.$emit('playNext', this.playList.shift());
+				}
+			});
 		},
 		components: {
 			mod_top,
@@ -53,6 +69,7 @@
 			mod_comment
 		}
 	}
+
 </script>
 
 <style>

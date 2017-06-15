@@ -2,16 +2,22 @@
     <section class="mod_top">
         <h1 class="hide">金曲捞第九期 第9期</h1>
         <span class="top__bg"><img src="./assets/headerbg.jpg" class="top__bg_img js_head_pic" alt="金曲捞第九期 第9期"></span>
-        <a href="javascript:;" class="top__btn js_playallsong" title="播放全部">
+        <a href="javascript:;" class="top__btn js_playallsong" title="播放全部" @click="onPlayAll">
             <img src="./assets/bofangbtn.png" class="top__btn_img" alt="播放全部">
         </a>
     </section>
 </template>
 
 <script>
+    import { bus } from './bus.js'
     export default {
         data () {
             return {}
+        },
+        methods: {
+            onPlayAll: function () {
+                bus.$emit('playAll');
+            }
         }
     }
 </script>

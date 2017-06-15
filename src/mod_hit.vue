@@ -49,6 +49,7 @@
 </template>
 <script type="text/ecmascript-6">
 	import axios from 'axios';
+	import { bus } from './bus.js'
 	export default {
 		data () {
 			return {
@@ -86,6 +87,18 @@
 			}).catch(error => {
 				console.log(error)
 			})
+
+			bus.$on('playAll', () => {
+				var midArr = this.arr.map((item, index) => {
+					return index;
+				});
+				this.$emit('playMusic', midArr);
+			})
+
+			bus.$on('playNext', (index) => {
+				var item = this.arr[index];
+				this.onClick(item);
+			});
 		}
 	}
 </script>
