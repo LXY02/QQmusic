@@ -103,8 +103,7 @@
 		top: 0;
 		width: 41px;
 		height: 100%;
-		border: solid 8px #000;
-		border-color: currentColor;
+		border: 8px solid currentColor;
 		-webkit-box-sizing: border-box;
 		opacity: .05;
 		background-color: transparent;
@@ -146,9 +145,7 @@
 		z-index: 1;
 		-webkit-box-sizing: border-box;
 		pointer-events: none;
-		border-style: solid;
-		border-width: 0 0 1px 0;
-		border-color: currentColor;
+		border: 0 solid currentColor; border-bottom-width: 1px;
 		opacity: .5;
 	}
 	.vote__nav_box {
@@ -180,9 +177,7 @@
 		margin-left: -4px;
 		width: 0;
 		height: 0;
-		border-style: solid;
-		border-width: 4px;
-		border-color: transparent transparent currentColor transparent;
+		border: 4px solid transparent; border-bottom-color: currentColor;
 		display: none;
 	}
 	.vote__bd {
